@@ -1,3 +1,4 @@
+import { convertToRoman } from "../../utils/roman"
 import "./MovieList.css"
 
 const MovieList = ({movies, onMovieClick})=>{
@@ -15,7 +16,7 @@ const MovieList = ({movies, onMovieClick})=>{
             {movies.map(movie => (
                 <li className="movie-item" key={movie.title + movie.episode_id} onClick={()=>onMovieClick(movie)}>
                     <span className="episode-number">EPISODE {movie.episode_id}</span>
-                    <span className="movie-title">{movie.title}</span>
+                    <span className="movie-title">Episode {convertToRoman(movie.episode_id)} - {movie.title}</span>
                     <span className="release-date">{movie.release_date}</span>
                 </li>
             ))}
