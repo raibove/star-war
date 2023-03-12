@@ -1,3 +1,5 @@
+import "./MovieList.css"
+
 const MovieList = ({movies, onMovieClick})=>{
     
     if(movies===null || movies===undefined){
@@ -7,14 +9,14 @@ const MovieList = ({movies, onMovieClick})=>{
             </div>
         )
     }
-    
+
     return(
-        <ul>
+        <ul className="movie-list">
             {movies.map(movie => (
-                <li key={movie.title + movie.episode_id} onClick={onMovieClick}>
-                    <span>Episode {movie.episode_id}</span>
-                    <span>{movie.title}</span>
-                    <span>{movie.release_date}</span>
+                <li className="movie-item" key={movie.title + movie.episode_id} onClick={onMovieClick}>
+                    <span className="episode-number">EPISODE {movie.episode_id}</span>
+                    <span className="movie-title">{movie.title}</span>
+                    <span className="release-date">{movie.release_date}</span>
                 </li>
             ))}
         </ul>

@@ -1,0 +1,25 @@
+.movie-list{
+    font-size: 1em;
+    padding: 0;
+}
+
+.movie-item{
+    list-style: none;
+    padding: 10px;
+    border-bottom: 2px solid #cac9c9;
+    cursor: pointer;
+}
+
+.episode-number{
+    color: #949292;
+    float: left;
+}
+
+.movie-title{
+    margin: 0 20px;
+}
+
+.release-date{
+    color: #949292;
+    float: right;
+}
