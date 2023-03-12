@@ -13,7 +13,7 @@ const MovieList = ({movies, onMovieClick})=>{
     return(
         <ul className="movie-list">
             {movies.map(movie => (
-                <li className="movie-item" key={movie.title + movie.episode_id} onClick={onMovieClick}>
+                <li className="movie-item" key={movie.title + movie.episode_id} onClick={()=>onMovieClick(movie)}>
                     <span className="episode-number">EPISODE {movie.episode_id}</span>
                     <span className="movie-title">{movie.title}</span>
                     <span className="release-date">{movie.release_date}</span>
