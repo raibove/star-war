@@ -3,7 +3,7 @@ import "./MovieDetails.css";
 const MovieDetails = ({selectedMovie})=>{
 
     return (
-        <div>
+        <div className="movie-details">
             {selectedMovie===null ? 
                 <h3 className="no-movie">No movie selected</h3> 
                 :

@@ -1,6 +1,9 @@
 .movie-list{
     font-size: 1em;
     padding: 0;
+    margin: 0;
+    flex: 1;
+    border-right: 1px solid #cac9c9;
 }
 
 .movie-item{

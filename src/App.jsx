@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <div className="movie-container">
         <MovieList movies={movies} onMovieClick={handleMovieClick}/>
         <MovieDetails selectedMovie={selectedMovie}/>
       </div>
