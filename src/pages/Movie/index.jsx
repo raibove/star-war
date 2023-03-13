@@ -6,7 +6,7 @@ import Sort from "../../components/Sort";
 import { sortMovies, searchMovies } from "../../utils/filterMovies";
 import "./Movie.css";
 
-function Movie({ movies }) {
+function Movie({ movies, loading }) {
   const options = [
     { value: "episode", label: "episode" },
     { value: "year", label: "year" },
@@ -47,7 +47,11 @@ function Movie({ movies }) {
         />
       </div>
       <div className="movie-container">
-        <MovieList movies={filteredMovies} onMovieClick={handleMovieClick} />
+        <MovieList
+          movies={filteredMovies}
+          onMovieClick={handleMovieClick}
+          loading={loading}
+        />
         <MovieDetails selectedMovie={selectedMovie} />
       </div>
     </div>

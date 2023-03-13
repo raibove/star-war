@@ -5,6 +5,7 @@ import Movie from "./pages/Movie";
 
 function App() {
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const getMovies = async () => {
     try {
@@ -12,9 +13,11 @@ function App() {
         "https://swapi.dev/api/films/?format=json"
       );
       setMovies(response.data.results);
+      setLoading(false);
     } catch (err) {
       // eslint-disable-next-line no-console
       console.log(err);
+      setLoading(false);
     }
   };
 
@@ -24,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <Movie movies={movies} />
+      <Movie movies={movies} loading={loading} />
     </div>
   );
 }
