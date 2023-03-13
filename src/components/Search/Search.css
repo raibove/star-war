@@ -1,12 +1,12 @@
 .search-container{
-    margin: 10px 15px;
     display: flex;
+    flex-grow: 1;
 }
 
 .search-input{
     flex-grow: 1;
     font-size: 16px;
-    padding: 4px;
+    padding: 6px;
 }
 
 .search-input:focus{

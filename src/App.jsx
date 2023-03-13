@@ -4,6 +4,7 @@ import MovieList from './components/MovieList'
 import axios from 'axios';
 import MovieDetails from './components/MovieDetails';
 import Search from './components/Search';
+import Sort from './components/Sort';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -27,7 +28,6 @@ function App() {
 
   const handleMovieClick = (movie)=>{
     setSelectedMovie(movie)
-    console.log(movie)
   }
 
   const handleFilterMovies = (query)=>{
@@ -42,9 +42,14 @@ function App() {
     handleFilterMovies(query)
   }
 
+  const updateFilteredMovies = (updatedMovies)=>{
+    setFilteredMovies([...updatedMovies])
+  }
+
   return (
     <div className="App">
       <div className='filter-container'>
+        <Sort filteredMovies={filteredMovies} updateFilteredMovies={updateFilteredMovies}/>
         <Search searchQuery={searchQuery} handleSearchChange={handleSearchChange}/>
       </div>
       <div className="movie-container">
