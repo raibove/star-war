@@ -22,6 +22,7 @@ function MovieList({ movies, onMovieClick, loading }) {
                 }}
                 aria-label={`Select ${movie.title}`}
                 role="button"
+                className="movie-item-div"
               >
                 <span className="episode-number">
                   EPISODE {movie.episode_id}
