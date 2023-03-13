@@ -3,6 +3,7 @@ import MovieList from '../../components/MovieList';
 import Search from '../../components/Search';
 import Sort from '../../components/Sort';
 import { useState, useEffect } from 'react';
+import { sortMovies, searchMovies } from '../../utils/filterMovies';
 import './Movie.css';
 
 const Movie = ({movies})=>{
@@ -24,22 +25,8 @@ const Movie = ({movies})=>{
     }
 
     const handleFilterMovies = ()=>{
-        let filterMovies = movies.filter(movie=>
-            movie.title.toLowerCase().includes(searchQuery.toLowerCase())
-        )
-
-        let sortedMovies = filterMovies;
-
-        if(sortType==='year'){
-            sortedMovies = filterMovies.sort((a,b) => {
-                const aDate = new Date(a.release_date);
-                const bDate = new Date(b.release_date);
-
-                return aDate - bDate;
-            })
-        }else if(sortType==='episode'){
-            sortedMovies = filterMovies.sort((a,b)=> a.episode_id - b.episode_id)
-        }
+        let filterMovies = searchMovies(searchQuery, movies);
+        let sortedMovies = sortMovies(sortType, filterMovies);
 
         setFilteredMovies(sortedMovies);
     }
