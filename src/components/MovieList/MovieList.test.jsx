@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import MovieList from './index';
 import { afterEach, describe, expect, it, vi } from 'vitest'
