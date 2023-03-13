@@ -11,7 +11,7 @@ describe("<MovieList/>", () => {
     ];
     const onMovieClick = () => {};
     const { container } = render(
-      <MovieList movies={movies} onMovieClick={onMovieClick} />
+      <MovieList movies={movies} onMovieClick={onMovieClick} loading={false} />
     );
     const movieElements = container.querySelectorAll("li");
     expect(movieElements.length).toEqual(movies.length);
@@ -25,10 +25,10 @@ describe("<MovieList/>", () => {
     ];
 
     const onMovieClick = vi.fn();
-    const { container } = render(
-      <MovieList movies={movies} onMovieClick={onMovieClick} />
+    const { getAllByRole } = render(
+      <MovieList movies={movies} onMovieClick={onMovieClick} loading={false} />
     );
-    const movieElements = container.querySelectorAll("li");
+    const movieElements = getAllByRole("button");
     fireEvent.click(movieElements[1]);
     expect(onMovieClick).toHaveBeenCalledWith(movies[1]);
   });

@@ -10,7 +10,7 @@ describe("<Movie/>", () => {
       { episode_id: 3, title: "Return of the Jedi", director: "Marquand" },
     ];
 
-    const { getByText } = render(<Movie movies={movies} />);
+    const { getByText } = render(<Movie movies={movies} loading={false} />);
 
     const filmTitles = getByText(new RegExp(movies[0].title, "i"));
     fireEvent.click(filmTitles);
@@ -25,7 +25,7 @@ describe("<Movie/>", () => {
     ];
 
     const { queryByText, getByPlaceholderText } = render(
-      <Movie movies={movies} />
+      <Movie movies={movies} loading={false} />
     );
 
     expect(queryByText(new RegExp(movies[0].title, "i"))).toBeInTheDocument();
