@@ -41,7 +41,7 @@ const Movie = ({movies})=>{
     }
     
     return(
-        <div>
+        <div className='movie'>
             <div className='filter-container'>
                 <Sort options={options} handleSortChange={handleSortChange}/>
                 <Search searchQuery={searchQuery} handleSearchChange={handleSearchChange}/>
