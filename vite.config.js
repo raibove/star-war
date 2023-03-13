@@ -4,6 +4,7 @@ import eslint from "vite-plugin-eslint";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/star-war",
   plugins: [react(), eslint()],
   test: {
     globals: true,
