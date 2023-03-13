@@ -6,9 +6,9 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 describe('<MovieList/>',()=>{
     it('Renders correct number of movies', ()=>{
         const movies = [
-            { episode_id: 1, title: 'The Phantom Menace' },
-            { episode_id: 2, title: 'Attack of the Clones' },
-            { episode_id: 3, title: 'Revenge of the Sith' }
+            { episode_id: 1, title: 'A New Hope' },
+            { episode_id: 2, title: 'The Empire Strikes Back' },
+            { episode_id: 3, title: 'Return of the Jedi' }
           ];
           const onMovieClick = () => {};
           const { container } = render(<MovieList movies={movies} onMovieClick={onMovieClick} />);
@@ -18,9 +18,9 @@ describe('<MovieList/>',()=>{
 
     it('calls the onClick function with the correct  object when a movie title is clicked', () => {
         const movies = [
-          { episode_id: 1, title: 'The Phantom Menace' },
-          { episode_id: 2, title: 'Attack of the Clones' },
-          { episode_id: 3, title: 'Revenge of the Sith' }
+          { episode_id: 1, title: 'A New Hope' },
+          { episode_id: 2, title: 'The Empire Strikes Back' },
+          { episode_id: 3, title: 'Return of the Jedi' }
         ];
 
         const onMovieClick = vi.fn();
