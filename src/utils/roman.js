@@ -1,14 +1,22 @@
-export const convertToRoman = (number)=>{
-    if(isNaN(number)){
-        return "";
-    }
+/* eslint-disable import/prefer-default-export */
+export const convertToRoman = (number) => {
+  if (Number.isNaN(number)) {
+    return "";
+  }
 
-    let digits = String(number).split(""),
-    key = ["","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
-           "","I","II","III","IV","V","VI","VII","VIII","IX"],
-    roman = "",
-    i = 2;
-    while (i--)
-        roman = (key[+digits.pop() + (i * 10)] || "") + roman;
-    return roman;
-}
+  const digits = String(number).split("");
+
+  // eslint-disable-next-line prettier/prettier
+    const key = ["","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
+    // eslint-disable-next-line prettier/prettier
+           "","I","II","III","IV","V","VI","VII","VIII","IX"]
+
+  let roman = "";
+
+  let i = 2;
+
+  // eslint-disable-next-line no-plusplus
+  while (i--) roman = (key[+digits.pop() + i * 10] || "") + roman;
+
+  return roman;
+};

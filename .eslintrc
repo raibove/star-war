@@ -1,5 +1,15 @@
 {
     "extends": [
-      "react-app"
-    ]
+      "react-app", "airbnb", "prettier"
+    ],
+    "plugins": ["prettier"],
+    "rules": {
+        "prettier/prettier": ["error", {
+            "endOfLine": "auto"
+          }],
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off"
+        
+    }
 }
