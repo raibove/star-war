@@ -29,7 +29,7 @@ npm install
 npm run dev
 ```
 
-This will start your app on http://127.0.0.1:5173/
+This will start your app on http://127.0.0.1:5173/star-war
 
 4. Run the test using following command
 ```
