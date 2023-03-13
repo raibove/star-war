@@ -17,6 +17,12 @@ const Movie = ({movies})=>{
     const [sortType, setSortType] = useState('release_date');
     
     useEffect(()=>{
+        
+    const handleFilterMovies = ()=>{
+            let filterMovies = searchMovies(searchQuery, movies);
+            let sortedMovies = sortMovies(sortType, filterMovies);
+            setFilteredMovies(sortedMovies);
+        }
         handleFilterMovies()
     }, [movies, searchQuery, sortType])
 
@@ -24,12 +30,6 @@ const Movie = ({movies})=>{
         setSelectedMovie(movie)
     }
 
-    const handleFilterMovies = ()=>{
-        let filterMovies = searchMovies(searchQuery, movies);
-        let sortedMovies = sortMovies(sortType, filterMovies);
-
-        setFilteredMovies(sortedMovies);
-    }
     
     const handleSearchChange = (query)=>{
         setSearchQuery(query)

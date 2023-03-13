@@ -15,17 +15,26 @@ This repository contains the following files:
 To use the code in this repository follow the steps
 
 1. Clone the repository to your local machine
-```git clone https://github.com/raibove/star-war.git```
+```
+git clone https://github.com/raibove/star-war.git
+```
 
 2. Install dependencies by running the following command
-```npm install```
+```
+npm install
+```
 
 3. Run the app using following command
-```npm run dev```
+```
+npm run dev
+```
+
 This will start your app on http://127.0.0.1:5173/
 
 4. Run the test using following command
-```npm run test```
+```
+npm run test
+```
 
 ## Feedback and Questions
 

@@ -1,7 +1,7 @@
 import Movie from "./index";
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
-import { beforeEach, describe, expect, test, vi } from 'vitest'
+import { render, fireEvent } from '@testing-library/react';
+import { describe, expect } from 'vitest'
 
 describe('<Movie/>', ()=>{
 

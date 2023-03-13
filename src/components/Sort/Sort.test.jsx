@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react';
 import Sort from './index';
-import { beforeEach, describe, expect, test, vi } from 'vitest';  
+import { describe, expect, vi } from 'vitest';  
 
 describe('<Sort/>',  ()=>{
     it('render select component', ()=>{
